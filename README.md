@@ -29,7 +29,8 @@ The dataset was cleaned and prepared before visualization.
 ### Run Command
 ```bash
 python plotly.ipynb
-(or export notebook to .py and run)
+```bash
+
 
 🌐 Streamlit Dashboard
 Features
@@ -40,12 +41,13 @@ Interactive visualizations (Line, Bar, Scatter, Histogram, Box)
 Automatic outlier detection and removal
 
 Run Command
-bash
-Copy code
+```bash
 streamlit run stream.py
+```bash
+
 📁 Project Structure
-bash
-Copy code
+```bash
+
 EV_Sales_Analysis_Project/
 │
 ├── data_preprocessing.ipynb   # Data cleaning and preprocessing
@@ -53,16 +55,18 @@ EV_Sales_Analysis_Project/
 ├── stream.py                  # Streamlit dashboard
 ├── ev_data_sales.csv          # Dataset
 └── README.md                  # Project documentation
+```bash
+
 ⚙️ Requirements
 Install dependencies using:
 
-bash
-Copy code
+```bash
 pip install -r requirements.txt
+```bash
+
 Or manually install:
 
-bash
-Copy code
+```bash
 pandas
 numpy
 matplotlib
@@ -70,6 +74,8 @@ seaborn
 plotly
 dash
 streamlit
+```bash
+
 🏁 Conclusion
 This project demonstrates a complete data analytics pipeline — from data cleaning to interactive dashboard creation.
 Both Dash and Streamlit provide visual insights into EV sales trends, making this project useful for data analysis, reporting, and business intelligence.
@@ -78,16 +84,3 @@ Both Dash and Streamlit provide visual insights into EV sales trends, making thi
 Vanitha P
 📍 EV Sales Analysis Project | 2025
 
-yaml
-Copy code
-
----
-
-### 💡 Now do this:
-1. Replace your current README text with the one above.  
-2. Save it as `README.md` (not `.txt`).  
-3. Run:
-   ```bash
-   git add README.md
-   git commit -m "Fix README formatting"
-   git push
