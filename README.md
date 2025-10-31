@@ -1,102 +1,97 @@
-# ⚡ EV Sales Analysis Project
+# ⚡ Electric Vehicle (EV) Sales Analysis Dashboard
 
-This project focuses on analyzing **Electric Vehicle (EV) sales data** and visualizing insights using **Python**, **Plotly**, and **Streamlit**.  
-It includes data preprocessing, cleaning, and interactive dashboards to explore sales trends effectively.
-
----
-
-## 🧠 Objectives
-- Analyze global EV sales data
-- Perform data preprocessing and cleaning
-- Visualize trends using interactive charts
-- Build dashboards using **Plotly** and **Streamlit**
+A complete data analysis and visualization project built using **Python, Pandas, Matplotlib, and Streamlit**, showcasing insights from global EV sales data.
 
 ---
 
-## 🧰 Technologies Used
+## 🧩 Project Overview
+This project analyzes **Electric Vehicle (EV) sales trends** across various regions and years, providing insights into adoption growth, manufacturer performance, and market patterns.
 
-| Category | Tools / Libraries |
-|-----------|------------------|
-| **Language** | Python |
-| **Data Processing** | Pandas, NumPy |
-| **Visualization** | Plotly, Matplotlib, Seaborn |
-| **Dashboard** | Streamlit |
-| **IDE Used** | Jupyter Notebook, Visual Studio Code |
+The dashboard is built using **Streamlit** for interactive visualization and data exploration.
 
 ---
 
-## ⚙️ Installation & Requirements
-
-### Install required libraries before running:
-```bash
-pip install pandas numpy matplotlib seaborn plotly streamlit
-📂 Project Structure
-```bash
+## 📁 Project Structure
+```
 EV_Sales_Analysis_Project/
 │
-├── ev_data_preprocessing.ipynb   # Data cleaning and preprocessing
-├── plotly.ipynb                   # Data visualization notebook
-├── stream.py                      # Streamlit dashboard script
-├── ev_data_sales.csv              # EV sales dataset
-└── README.md                      # Project documentation
-🧹 Data Preprocessing
-Performed using Jupyter Notebook:
+├── data/
+│   └── IEA-EV-dataEV salesHistoricalCars.csv
+│
+├── EV_Data_Preprocessing.ipynb        # Data cleaning and preprocessing
+├── EV_Dashboard.py                    # Streamlit dashboard code
+├── README.md                          # Project documentation
+└── requirements.txt                   # Dependencies list
 
-Loaded dataset using Pandas
+```
 
-Checked for null or duplicate values
+## ⚙️ Technologies Used
 
-Removed or imputed missing data
+- **Python 3**
+- **Pandas** – Data manipulation
+- **Matplotlib / Plotly** – Visualization
+- **Streamlit** – Interactive dashboard
+- **Jupyter Notebook** – Data preprocessing
 
-Converted data types
+---
 
-Performed feature selection and statistical analysis
+## 🧠 Key Features
+✅ Data cleaning and preprocessing using Pandas  
+✅ Visualization of EV sales trends by country, company, and year  
+✅ Interactive Streamlit dashboard for dynamic insights  
+✅ Ready-to-run deployment setup
 
-Saved the cleaned data for visualization
+---
 
-📊 Dashboard Features
-🔹 Plotly Dashboard
-Multiple chart types (Line, Bar, Scatter, Histogram, Box)
+## 🧹 Data Preprocessing Steps
+1. **Import Dataset**
+   ```python
+   import pandas as pd
+   df = pd.read_csv('EV_sales_data.csv')
+2. **Handle Missing Values**
+   ```python
+   df = df.dropna()
+3. **Convert Data Types**
+   ```python
+   df['Year'] = df['Year'].astype(int)
+4. **Basic Analysis**
+   ```python
+   df.describe()
+   df.info()
 
-Dropdown filters for country, year, and vehicle type
+📊 Dashboard (Streamlit)
+File: ev_dashboard.py
 
-Real-time interactive updates
+Example Code
+```python
+import streamlit as st
+import pandas as pd
+import plotly.express as px
 
-🌐 Streamlit Dashboard
-Dataset overview and info display
+st.set_page_config(page_title="EV Sales Dashboard", layout="wide")
 
-Automatic outlier detection and removal
+df = pd.read_csv("data/EV_sales_data.csv")
 
-Interactive charts for sales visualization
+st.title("⚡ EV Sales Analysis Dashboard")
 
-▶️ Run Commands
-🧩 For Plotly Notebook
-If using Jupyter Notebook:
+col1, col2 = st.columns(2)
+with col1:
+    country = st.selectbox("Select Country", df["Country"].unique())
+with col2:
+    year = st.slider("Select Year", int(df["Year"].min()), int(df["Year"].max()), int(df["Year"].min()))
 
-bash
-Copy code
-python plotly.ipynb
-(or export notebook to .py file and run in terminal)
+filtered_df = df[(df["Country"] == country) & (df["Year"] == year)]
 
-🌍 For Streamlit Dashboard
-To launch the Streamlit web app:
+fig = px.bar(filtered_df, x="Manufacturer", y="Sales", color="Manufacturer",
+             title=f"EV Sales by Manufacturer in {country} ({year})")
+st.plotly_chart(fig, use_container_width=True)
 
-
-streamlit run stream.py
-🧩 Example Visualizations
-EV Sales by Country
-
-Sales Growth Over Years
-
-Vehicle Type Distribution
-
-Top Performing Markets
-
-🧾 Conclusion
-This project demonstrates a complete data analytics pipeline — from data cleaning to interactive dashboard creation.
-Both Plotly and Streamlit provide meaningful insights into EV sales trends, making this project valuable for data analysis, reporting, and business intelligence.
-
+```
 👩‍💻 Author
+
 Vanitha P
-EV Sales Data Analytics & Visualization Project
+
+📧 vanithavani.p26@gmail.com
+
+🔗 https://github.com/vanithaP26
 
