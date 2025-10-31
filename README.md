@@ -21,7 +21,7 @@ EV_Sales_Analysis_Project/
 ├── EV_Data_Preprocessing.ipynb        # Data cleaning and preprocessing
 ├── EV_Dashboard.py                    # Streamlit dashboard code
 ├── README.md                          # Project documentation
-└── requirements.txt                   # Dependencies list
+└── outputs                            # images 
 
 ```
 
