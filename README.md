@@ -47,5 +47,10 @@ Filter and visualize with dropdowns
 
 Simple, responsive, and interactive UI
 
+📸 Example Output
+
+(Add screenshots of your dashboard here for better presentation.)
+
+🧠 Author
 
 Developed by Vanitha P
