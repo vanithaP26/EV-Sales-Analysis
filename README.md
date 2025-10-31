@@ -26,61 +26,24 @@ The dataset was cleaned and prepared before visualization.
 - Select chart type (Line, Bar, Scatter, Histogram, Box)  
 - Interactive charts using dropdown filters  
 
-### Run Command
+### ▶️ Run Command
+Run the Dash visualization from the notebook or export it as a `.py` file:
+
 ```bash
 python plotly.ipynb
-```bash
 
+---
 
-🌐 Streamlit Dashboard
-Features
-Dataset overview and info
+```markdown
+## 🌐 Streamlit Dashboard
 
-Interactive visualizations (Line, Bar, Scatter, Histogram, Box)
+### Features
+- Dataset overview and info  
+- Interactive visualizations (Line, Bar, Scatter, Histogram, Box)  
+- Automatic outlier detection and removal  
 
-Automatic outlier detection and removal
+### ▶️ Run Command
+To launch the interactive Streamlit dashboard, use:
 
-Run Command
 ```bash
 streamlit run stream.py
-```bash
-
-📁 Project Structure
-```bash
-
-EV_Sales_Analysis_Project/
-│
-├── data_preprocessing.ipynb   # Data cleaning and preprocessing
-├── plotly.ipynb               # Dash visualization
-├── stream.py                  # Streamlit dashboard
-├── ev_data_sales.csv          # Dataset
-└── README.md                  # Project documentation
-```bash
-
-⚙️ Requirements
-Install dependencies using:
-
-```bash
-pip install -r requirements.txt
-```bash
-
-Or manually install:
-
-```bash
-pandas
-numpy
-matplotlib
-seaborn
-plotly
-dash
-streamlit
-```bash
-
-🏁 Conclusion
-This project demonstrates a complete data analytics pipeline — from data cleaning to interactive dashboard creation.
-Both Dash and Streamlit provide visual insights into EV sales trends, making this project useful for data analysis, reporting, and business intelligence.
-
-👩‍💻 Author
-Vanitha P
-📍 EV Sales Analysis Project | 2025
-
