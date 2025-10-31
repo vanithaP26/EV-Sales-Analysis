@@ -1,49 +1,51 @@
-# ⚡ EV Sales Analysis Project
+📊 Data Visualization Dashboard
 
-## 📘 Overview
-The **EV Sales Analysis Project** explores global Electric Vehicle (EV) sales data through data preprocessing, cleaning, and visualization.  
-It includes two interactive dashboards built using **Dash (Plotly)** and **Streamlit**, providing user-friendly tools for data analysis and business intelligence.
+This project is an interactive dashboard built using Streamlit and Plotly for exploring datasets visually.
 
----
+🚀 Features
 
-## 🧹 Data Processing
-The dataset was cleaned and prepared before visualization.
+📁 Dataset overview and information
 
-### Steps Performed
-- Loaded and inspected the dataset (`ev_data_sales.csv`)
-- Handled missing values
-- Encoded categorical columns
-- Scaled numeric features using *StandardScaler*
-- Removed outliers using the *IQR method*
-- Final clean dataset reduced from **2360 → 1978 rows**
+📊 Interactive visualizations (Line, Bar, Scatter, Histogram, Box)
 
----
+🎯 Automatic outlier detection and removal
 
-## 📉 Dash (Plotly) Dashboard
+🎚️ Dropdown filters for dynamic chart updates
 
-### Features
-- Choose X-axis and Y-axis columns dynamically  
-- Select chart type (Line, Bar, Scatter, Histogram, Box)  
-- Interactive charts using dropdown filters  
+🧩 Requirements
 
-### ▶️ Run Command
-Run the Dash visualization from the notebook or export it as a `.py` file:
+Install the following libraries before running:
 
-```bash
+pip install pandas plotly streamlit matplotlib seaborn
+
+⚙️ Project Structure
+📂 Data_Visualization_Dashboard
+│
+├── 📄 stream.py             # Streamlit dashboard code
+├── 📄 plotly.ipynb          # Jupyter notebook version
+├── 📄 README.md             # Documentation file
+└── 📊 dataset.csv           # Your dataset file
+
+▶️ Run Command
+
+To launch the Streamlit dashboard, run:
+
+streamlit run stream.py
+
+
+Or to open the Jupyter Notebook version:
+
 python plotly.ipynb
 
----
+🌐 Streamlit Dashboard Overview
 
-```markdown
-## 🌐 Streamlit Dashboard
+Dataset summary and details
 
-### Features
-- Dataset overview and info  
-- Interactive visualizations (Line, Bar, Scatter, Histogram, Box)  
-- Automatic outlier detection and removal  
+Multiple chart types (Line, Bar, Scatter, Histogram, Box)
 
-### ▶️ Run Command
-To launch the interactive Streamlit dashboard, use:
+Filter and visualize with dropdowns
 
-```bash
-streamlit run stream.py
+Simple, responsive, and interactive UI
+
+
+Developed by Vanitha P
